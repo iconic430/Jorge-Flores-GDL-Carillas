@@ -69,9 +69,14 @@ export default function App() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest text-ink/70">
-            <a href="#formulario" className="bg-ink text-white px-6 py-3 rounded-full hover:bg-gold transition-all duration-300 shadow-lg shadow-ink/10">
+            <motion.a 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#formulario" 
+              className="bg-ink text-white px-6 py-3 rounded-full hover:bg-gold transition-all duration-300 shadow-lg shadow-ink/10"
+            >
               Agendar Cita
-            </a>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -87,7 +92,14 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden absolute top-20 left-0 w-full bg-paper border-b border-ink/5 p-6 flex flex-col gap-6 text-center shadow-xl"
           >
-            <a href="#formulario" onClick={() => setIsMenuOpen(false)} className="bg-ink text-white px-8 py-4 rounded-full font-medium">Agendar Cita</a>
+            <motion.a 
+              whileTap={{ scale: 0.95 }}
+              href="#formulario" 
+              onClick={() => setIsMenuOpen(false)} 
+              className="bg-ink text-white px-8 py-4 rounded-full font-medium"
+            >
+              Agendar Cita
+            </motion.a>
           </motion.div>
         )}
       </nav>
@@ -113,10 +125,15 @@ export default function App() {
               Transformamos vidas con honestidad, tecnología y un compromiso inquebrantable con tu salud.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-6 mb-16">
-              <a href="#formulario" className="w-full sm:w-auto bg-ink text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-gold transition-all duration-300 shadow-xl shadow-ink/20 flex items-center justify-center gap-2 group">
+              <motion.a 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                href="#formulario" 
+                className="w-full sm:w-auto bg-ink text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-gold transition-all duration-300 shadow-xl shadow-ink/20 flex items-center justify-center gap-2 group"
+              >
                 Agendar Consulta
                 <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+              </motion.a>
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-2">
                   {[1,2,3].map(i => (
@@ -162,9 +179,9 @@ export default function App() {
                 </div>
               </div>
               <div className="relative group mx-auto md:mx-0">
-                <div className="w-32 h-32 md:w-full md:aspect-square rounded-2xl overflow-hidden shadow-lg border-2 border-white">
+                <div className="w-40 h-40 md:w-44 md:h-44 rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-square">
                   <img 
-                    src="https://picsum.photos/seed/dr-jorge-profile/400/400" 
+                    src="https://i.postimg.cc/wxfrHkq2/IMG-3316.jpg" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                     alt="Dr. Jorge Flores"
@@ -244,9 +261,14 @@ export default function App() {
                     </li>
                   ))}
                 </ul>
-                <a href="#formulario" className="w-full py-4 rounded-full border border-ink/10 font-bold uppercase tracking-widest text-xs hover:bg-ink hover:text-white transition-all duration-300 text-center block">
+                <motion.a 
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  href="#formulario" 
+                  className="w-full py-4 rounded-full border border-ink/10 font-bold uppercase tracking-widest text-xs hover:bg-ink hover:text-white transition-all duration-300 text-center block"
+                >
                   Solicita más información
-                </a>
+                </motion.a>
               </motion.div>
             ))}
           </div>
@@ -292,11 +314,11 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="text-xl font-serif mb-2">Ubicación</h4>
-                    <p className="text-white/60">Guadalajara, Jalisco, México</p>
-                    <p className="text-gold text-sm mt-1 font-medium">Zona Metropolitana</p>
+                    <p className="text-white/60">Sierra Morena 326, Independencia Oriente</p>
+                    <p className="text-gold text-sm mt-1 font-medium">44340 Guadalajara, Jal.</p>
                     <div className="mt-6 rounded-2xl overflow-hidden border border-white/10 h-48 md:h-64">
                       <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.846547634354!2d-103.3276544241743!3d20.68600008087968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b19333333333%3A0x8428b19333333333!2sAv.%20Belisario%20Dom%C3%ADnguez%201000%2C%20Belisario%20Dom%C3%ADnguez%2C%2044329%20Guadalajara%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1708800000000!5m2!1ses-419!2smx" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.766158765432!2d-103.3304567!3d20.6902345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1e3db93fb23%3A0xf459e1fffcdc6bd8!2sDr%20Jorge%20Flores%20Dentista%20-%20Carillas%20GDL!5e0!3m2!1ses-419!2smx!4v1708900000000!5m2!1ses-419!2smx" 
                         width="100%" 
                         height="100%" 
                         style={{ border: 0 }} 
