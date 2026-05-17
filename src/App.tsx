@@ -22,7 +22,7 @@ function cn(...inputs: ClassValue[]) {
 
 const SERVICES = [
   {
-    title: "SMILE GLOW UP EXPERIENCE",
+    title: "PROTOCOLO DE TRANSFORMACIÓN TOTAL",
     subtitle: "8 Carillas de Porcelana",
     featured: true,
     prices: {
@@ -42,7 +42,7 @@ const SERVICES = [
     ]
   },
   {
-    title: "SMILE GLOW EXPRESS EXPERIENCE",
+    title: "SMILE EXPRESS PROTOCOL",
     subtitle: "8 Carillas de Cerámica Híbrida",
     featured: false,
     prices: {
